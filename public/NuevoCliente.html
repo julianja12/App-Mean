@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevo Cliente</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="\css\bootstrap.min.css">
+	<link rel="stylesheet" href="\css\styles.css">
+
+</head>
+<body>
+	<header>
+		<h2>Formulario Nuevo Cliente</h2>
+	</header>
+
+
+<div ng-controller="AppCtrl">
+				<div class="form-group">
+
+				<form role="form" class="NuevoCliente">
+
+				<div class="col-sm-4">
+								<label for="nit" >Nit: </label>
+								<input class="form-control" ng-model="Client.Nit">
+				</div>
+					<div class="col-sm-4" >
+									<label for="cliente" >Cliente: </label>
+									<input  class="form-control" ng-model="Client.Cliente">
+					</div>
+
+				<div class="col-sm-4" >
+						<label for="NombreVendedor" >Vendedor: </label>
+			          <select class="form-control" id="Vendedor" ng-model="Client.Vendedor">
+									<option selected > Seleccione Vendedor </option>
+									<option value="Vendedor1">Vendedor 1</option>
+									<option value="Vendedor2">Vendedor 2</option>
+									<option value="Vendedor3">Vendedor 3</option>
+			          </select>
+			  </div>
+
+				<div class="col-sm-4">
+							<label for="Direccion">Direccion: </label>
+							<input class="form-control" ng-model="Client.Direccion"  >
+				</div>
+
+			<div class="col-sm-4" >
+							<label for="Ciudad" >Ciudad: </label>
+							<input  class="form-control" ng-model="Client.Ciudad" >
+			</div>
+
+			<div class= "col-sm-4">
+							<label for="Telefono" >Telefono: </label>
+							<input class="form-control" ng-model="Client.Telefono" >
+			</div>
+
+			<div class="col-sm-4">
+							<label for="Estructura" >Estructural: </label>
+							<select  class="form-control" name="Estructura" id="Estructura" ng-model="Client.Estructura">
+						   <option selected value="0"> Seleccione Estructural </option>
+						       <option value="Estructura 1">Estructura 1</option>
+						       <option value="Estructura 2">Estructura 2</option>
+						       <option value="Estructura 3">Estructura 3</option>
+							</select>
+			</div>
+
+			<div class="col-sm-4" >
+							<label for="Grafico" >Grafico: </label>
+							<select class="form-control"  name="Grafico" id="Grafico" ng-model="Client.Grafico">
+						   <option selected value="0"> Seleccione Grafico </option>
+						       <option value="Grafico 1">Grafico 1</option>
+						       <option value="Grafico 2">Grafico 2</option>
+						       <option value="Grafico 3">Grafico 3</option>
+							</select>
+			</div>
+
+			<div class="col-sm-4" >
+							<label for="ServiCliente" >ServiCliente: </label>
+							<select class="form-control" name="ServiCliente" id="ServiCliente" ng-model="Client.ServiCliente">
+						   <option selected value="0"> Seleccione Servicliente </option>
+						       <option value="ServiCliente 1">ServiCliente 1</option>
+						       <option value="ServiCliente 2">ServiCliente 2</option>
+						       <option value="ServiCliente 3">ServiCliente 3</option>
+							</select>
+			</div>
+
+			<div class="col-sm-4" >
+							<label for="industrial" class="SectorIndustrial">Sector Industrial: </label>
+							<select class="form-control" name="Industrial" id="Industrial" ng-model="Client.Industrial" >
+						   <option selected value="0" > Seleccione Sector Industrial </option>
+						       <option value="Industrial 1">Sector Industrial 1</option>
+						       <option value="Industrial 2">Sector Industrial 2</option>
+						       <option value="Industrial 3">Sector Industrial 3</option>
+							</select>
+			</div>
+
+			<div class="col-sm-4" >
+							<label for="despachoMe">% Despacho Menos </label>
+							<input  class="form-control" ng-model="Client.DespachoMe">
+			</div>
+
+			<div class="col-sm-4" >
+							<label for="despachoM" class="despachoM">% Despacho Mas </label>
+							<input class="form-control" ng-model="Client.DespachoMas">
+			</div>
+
+			<div class="col-sm-4" id="Check" >
+							<label>
+							<input type="checkbox" value="BloquearPedidos" ng-model="Client.BloquearPedidos" >Bloquear Pedidos Por Cambio Precio:
+							</label>
+			</div>
+
+			<div class="col-sm-4"  id="Check">
+							<label >
+							<input type="checkbox" value="BloquearDespachos" ng-model="Client.BloquearDespachos" >Bloquear Despachos Por Cambio Precio:
+							</label>
+			</div>
+
+<button type="button" class="btn btn-primary" id="Guardarbtn" ng-click="addCliente()">Guardar</button>
+</form>
+</div>
+</div>
+
+	<!--Scritps -->
+	<script type= "text-javascript" src="\libraries\bootstrap.min.js"></script>
+	<script src="\libraries\angular.min.js"></script>
+	<script  src="\libraries\jquery-1.12.0.js"></script>
+	<script  src="\libraries\ui-bootstrap-tpls-1.1.0.min.js"></script>
+	<script  src="\controllers\controller.js"></script>
+
+
+</body>
+
+
+</html>
